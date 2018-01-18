@@ -13,7 +13,10 @@ Notes:
 
 ---
 
-Purpose: Learn to use heap memory and properly clean up your data without leaks or corruption.  
+Purpose:  
+
+Learn to use heap memory and properly clean up your data without leaks or corruption.  
+Redirect cin and cout to file i/o.
 
 Instructions:  
 

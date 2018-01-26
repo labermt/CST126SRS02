@@ -6,10 +6,11 @@ Class ID: Mespirit
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:  None.
 
-Notes:  
-
+Notes:  char name [257];
+		std::cin << setw(256) << name;
+		check for nullptr presence in test cases. if present, short circuit
 
 ---
 

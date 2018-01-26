@@ -11,7 +11,7 @@ Unresolved Issues:  None.
 Notes:  char name [257];
 		std::cin << setw(256) << name;
 		check for nullptr presence in test cases. if present, short circuit
-
+		output the input in reverse line by line
 ---
 
 Purpose:  

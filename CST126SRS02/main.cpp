@@ -21,11 +21,6 @@ int main()
 		temp = new char * [i + 1];
 		names[i] = new char[strlen(nameInput) + 1];
 
-		for (int i2 = 0; i2 < i + 1; ++i2)
-		{
-			temp[i2] = names[i2];
-		}
-
 		numNames = i;
 	}
 

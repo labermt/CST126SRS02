@@ -163,7 +163,9 @@
     <None Include="..\..\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="names.txt" />
+    <Text Include="names.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">y</ExcludedFromBuild>
+    </Text>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

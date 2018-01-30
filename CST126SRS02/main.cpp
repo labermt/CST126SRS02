@@ -27,6 +27,8 @@ int main()
 
 		str = new char[strlen(buffer) + 1];
 
+		strcpy(str, buffer);
+
 		names[i] = buffer;
 		i++;
 	}

@@ -44,6 +44,8 @@ Seadra Phantump Persian
 Shelmet  
 Tentacool Tangela Staryu Spheal Spearow Solrock Sliggoo  
 
+The processing is done on a line by line basis. Each line input is echoed back in reverse order before processing the next line. 
+
 A name can be a maximum of 256 characters.  
 
 There is no limit on the number of lines or the number of names per line.  

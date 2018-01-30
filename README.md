@@ -20,7 +20,7 @@ Redirect cin and cout to file i/o.
 
 Instructions:  
 
-Read lines of text from std::cin into a ragged cstring array until the end of line is reached.  
+Read text from std::cin into a ragged cstring array until the end of line is reached.  
 
 Each element of the ragged array must be allocated on the heap.  
 

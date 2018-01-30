@@ -27,19 +27,12 @@ int main()
 
 		str = new char[strlen(buffer) + 1];
 
-		strcpy(str, buffer);
+		strcpy_s(str, strlen(buffer) + 1, buffer);
 
-		names[i] = buffer;
+		names[i] = str;
+		cout << names[i];
 		i++;
 	}
-	
-
-
-
-
-
-
-
 
 
     return 0;

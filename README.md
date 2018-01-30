@@ -55,4 +55,8 @@ Be certain to properly clean up any allocated memory. Leaks and memory corruptio
 TIPS: 
 - There is NO file I/O in this assignment. NONE!  Only std::cin and std::cout. 
 - Be certain to read the Class Policy document on things "not expressly mentioned in an SRS". 
+- You may want to redirect your input and output using the Windows command shell. ex: >out.txt <in.txt 
+- Read about redirecting input and output from a Windows shell if this isn't clear. 
+- When processing data directly from cin, you can generate an eof by entering Ctrl-Z on a line by itself. 
+
 

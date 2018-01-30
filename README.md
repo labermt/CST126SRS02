@@ -51,3 +51,8 @@ A name can be a maximum of 256 characters.
 There is no limit on the number of lines or the number of names per line.  
 
 Be certain to properly clean up any allocated memory. Leaks and memory corruption will be graded harshly.  
+
+TIPS: 
+- There is NO file I/O in this assignment. NONE!  Only std::cin and std::cout. 
+- Be certain to read the Class Policy document on things "not expressly mentioned in an SRS". 
+

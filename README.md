@@ -2,7 +2,7 @@
 Reverse
 
 
-Class ID: 
+Class ID: Staryu
 
 SRS ID: CST126SRS02
 

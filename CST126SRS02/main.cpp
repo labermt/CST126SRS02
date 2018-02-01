@@ -19,10 +19,12 @@ int main()
 
 	names = new char*[4];
 
-	int i{};
+	cout << "Feed me strings, Seymour! \n";
 
+	int i{};
 	while (i < num_names)
 	{
+
 		cin >> setw(256) >> buffer;
 
 		str = new char[strlen(buffer) + 1];
@@ -30,10 +32,12 @@ int main()
 		strcpy_s(str, strlen(buffer) + 1, buffer);
 
 		names[i] = str;
-		cout << names[i];
+		for (int a{}; a < i; a++)
+		{
+			cout << names[a] << endl;
+		}
 		i++;
 	}
-
 
     return 0;
 }

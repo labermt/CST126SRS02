@@ -8,9 +8,7 @@
 int main()
 {
 	int numNames = 0;
-	char ** names = nullptr;
-	char ** temp = nullptr;
-	char * str = nullptr;
+	char * names = nullptr;
 	char nameInput[257];
 	
 	for (int i = 0;;++i)
@@ -18,10 +16,11 @@ int main()
 		if (std::cin.peek() == '\n') { break; }  //Exits loop at end of line
 		
 		std::cin >> std::setw(256) >> nameInput;
-		temp = new char * [i + 1];
-		names[i] = new char[strlen(nameInput) + 1];
-
-		numNames = i;
+		
+		int nameSize = size_t(nameInput);
+		names = new char[nameSize];
+		
+		++numNames;
 	}
 
 	for (int i = numNames; i >= 0; --i)

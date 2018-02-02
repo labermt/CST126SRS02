@@ -29,10 +29,12 @@ int main()
 
 		str = new char[strlen(buffer) + 1];
 
-		strcpy_s(str, strlen(buffer) + 1, buffer);
+		//strcpy_s(str, strlen(buffer) + 1, buffer);
+		strcpy(str, buffer);
 
 		names[i] = str;
-		for (int a{}; a < i; a++)
+
+		for (int a{}; a <= i; a++)
 		{
 			cout << names[a] << endl;
 		}

@@ -11,36 +11,66 @@ using namespace std;
 int main()
 {
 
-	char ** names = nullptr;
-	char * str = nullptr;
-	char buffer[257];
-	// initial value for number of names, will change dynamically as names are inputted
-	auto num_names = 4;
+	char ** nameList = nullptr;
 
-	names = new char*[4];
+	int capacity{};
+
+	nameList = new char*[capacity];
 
 	cout << "Feed me strings, Seymour! \n";
 
-	int i{};
-	while (i < num_names)
+	//Do stuff until you reach the end of the file.
+	while (cin.good())
 	{
-
-		cin >> setw(256) >> buffer;
-
-		str = new char[strlen(buffer) + 1];
-
-		//strcpy_s(str, strlen(buffer) + 1, buffer);
-		strcpy(str, buffer);
-
-		names[i] = str;
-
-		for (int a{}; a <= i; a++)
+		const auto nl = cin.peek(); //checking ahead for newline feed
+		int size{}; //number of names read in
+		if (nl != '\n')
 		{
-			cout << names[a] << endl;
+			while (size <= capacity)
+			{
+				char * currentName = nullptr;
+				char buffer[256]; // should that be 257?
+
+				cin >> setw(257) >> buffer;
+
+				// Makes room for more names and copies over the old list to temp
+				if(size == capacity)
+				{
+					//Add space and allocate to heap
+					capacity = (capacity * 2) + 1;
+					auto temp = new char*[capacity];
+
+					for (int copy{}; copy <= size; copy++)
+					{
+						//copy nameList into temp
+						temp[copy] = nameList[copy];
+						delete[] nameList;
+						nameList = temp;
+					}
+				}
+
+				currentName = new char[strlen(buffer) + 1];
+
+				strcpy(currentName, buffer);
+
+				// placing names into names array.
+				nameList[size] = currentName;
+				
+				size++;
+			}
 		}
-		i++;
+		else
+		{
+			// Output data
+			while(size)
+			{
+				cout << nameList[--size];
+				delete[] nameList[size];
+			}
+		}
 	}
 
+	delete[] nameList;
     return 0;
 }
 

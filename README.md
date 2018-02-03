@@ -2,50 +2,30 @@
 Reverse
 
 
-Class ID: 
+Class ID: Drilbur
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues: When inputting a name greater than 256 characters long, it will take the first 256 in as one name and the remaining characters as another name.
 
-Notes:  
+Notes: Compiled with Visual Studio 2017 on Windows 10.
 
+Test Cases Used:
+a b c
+Ann Bob Carol
+name1 name2 name3
+one
 
----
+a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0
+Doublade Drilbur Hippopotas Inkay Jigglypuff lllumise Magcargo Mespirit
+Mudkip Ninetales
 
-Purpose:  
-
-Learn to use heap memory and properly clean up your data without leaks or corruption.  
-Redirect cin and cout to file i/o.
-
-Instructions:  
-
-Read lines of text from std::cin into a ragged cstring array until the end of line is reached.  
-
-Each element of the ragged array must be allocated on the heap.  
-
-Each line can have zero, one, or multiple names.  
-
-For example:  
-
-Doublade Drilbur Hippopotas Inkay Jigglypuff lllumise Magcargo Mespirit  
-Mudkip Ninetales  
-  
-Persian Phantump Seadra  
-Shelmet  
-Sliggoo Solrock Spearow Spheal Staryu Tangela Tentacool  
-
-Process the data stored in the ragged array to std:cout in reverse order.
-
-Mespirit Magcargo lllumise Jigglypuff Inkay Hippopotas Drilbur Doublade  
-Mudkip Ninetales  
-  
-Seadra Phantump Persian  
-Shelmet  
-Tentacool Tangela Staryu Spheal Spearow Solrock Sliggoo  
-
-A name can be a maximum of 256 characters.  
-
-There is no limit on the number of lines or the number of names per line.  
-
-Be certain to properly clean up any allocated memory. Leaks and memory corruption will be graded harshly.  
+Persian Phantump Seadra
+Shelmet
+Sliggoo Solrock Spearow Spheal Staryu Tangela Tentacool
+This line  has   lots    of     spaces
+       Space at the start
+Space at the end       
+		Tab		
+		
+1234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678123456781234567812345678

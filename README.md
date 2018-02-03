@@ -1,15 +1,15 @@
 # CST126SRS02
 Reverse
 
-Class ID:
+Class ID: Magcargo
 
 SRS ID: CST126SRS02
 
 Unresolved Issues:
 
-Notes:
+Notes: Compiled with Microsoft Visual Studio Enterprise 2017 Version 15.3.3 on Windows 10
 
-Purpose:
+Purpose: To take cString from console, add each part to a ragged array, then output it in reverse order.
 
 Learn to use heap memory and properly clean up your data without leaks or corruption.
 Redirect cin and cout to file i/o.

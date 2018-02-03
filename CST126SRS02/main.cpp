@@ -14,6 +14,7 @@ int main()
 	char ** nameList = nullptr;
 
 	int capacity{};
+	int size{}; 
 
 	nameList = new char*[capacity];
 
@@ -23,41 +24,33 @@ int main()
 	while (cin.good())
 	{
 		const auto nl = cin.peek(); //checking ahead for newline feed
-		int size{}; //number of names read in
 		if (nl != '\n')
 		{
-			while (size <= capacity)
+			if(size == capacity)
+			{
+				//Add space and allocate to heap
+				capacity = (capacity * 2) + 1;
+				auto temp = new char*[capacity];
+
+				for (int copy{}; copy < size; copy++) temp[copy] = nameList[copy];
+
+				delete[] nameList;
+				nameList = temp;
+			}
+			while (size < capacity)
 			{
 				char * currentName = nullptr;
 				char buffer[258]; // should that be 257?
 
-				cin >> setw(258) >> buffer;
+				cin >> setw(sizeof(buffer) - 1) >> buffer;
 
 				currentName = new char[strlen(buffer) + 1];
 
 				strcpy(currentName, buffer);
 
-
-				// Makes room for more names and copies over the old list to temp
-				if(size == capacity)
-				{
-					//Add space and allocate to heap
-					capacity = (capacity * 2) + 1;
-					auto temp = new char*[capacity];
-
-					for (int copy{}; copy <= size; copy++)
-					{
-						//copy nameList into temp and delete original and point to temp as new list
-						temp[copy] = nameList[copy];
-						delete[] nameList;
-						nameList = temp;
-					}
-				}
-
-				// placing names into names array.
 				nameList[size] = currentName;
-				
 				size++;
+				
 			}
 		}
 		else
@@ -65,7 +58,7 @@ int main()
 			// Output data
 			while(size)
 			{
-				cout << nameList[--size];
+				cout << nameList[--size] << " ";
 				delete[] nameList[size];
 			}
 		}

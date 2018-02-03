@@ -7,7 +7,7 @@ SRS ID: CST126SRS02
 
 Unresolved Issues:
 
-Notes:
+Notes: Errant spaces (in front, trialing) cause issues. Certain whitespace characters also break it. Lines best fed in comma deliminated.
 
 Purpose:
 

@@ -24,20 +24,21 @@ int main()
 	while (cin.good())
 	{
 		const auto nl = cin.peek(); //checking ahead for newline feed
+
 		if (nl != '\n')
 		{
 			if(size == capacity)
 			{
 				//Add space and allocate to heap
 				capacity = (capacity * 2) + 1;
-				auto temp = new char*[capacity];
+				auto const temp = new char*[capacity];
 
 				for (int copy{}; copy < size; copy++) temp[copy] = nameList[copy];
 
 				delete[] nameList;
 				nameList = temp;
 			}
-			while (size < capacity)
+			while (size < capacity && cin.peek() != '\n')
 			{
 				char * currentName = nullptr;
 				char buffer[258]; // should that be 257?
@@ -61,6 +62,9 @@ int main()
 				cout << nameList[--size] << " ";
 				delete[] nameList[size];
 			}
+			cin.ignore();
+			cout << endl;
+			cout << "Feed me strings, Seymour! \n";
 		}
 	}
 

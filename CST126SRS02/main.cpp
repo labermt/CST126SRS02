@@ -29,9 +29,14 @@ int main()
 			while (size <= capacity)
 			{
 				char * currentName = nullptr;
-				char buffer[256]; // should that be 257?
+				char buffer[258]; // should that be 257?
 
-				cin >> setw(257) >> buffer;
+				cin >> setw(258) >> buffer;
+
+				currentName = new char[strlen(buffer) + 1];
+
+				strcpy(currentName, buffer);
+
 
 				// Makes room for more names and copies over the old list to temp
 				if(size == capacity)
@@ -42,16 +47,12 @@ int main()
 
 					for (int copy{}; copy <= size; copy++)
 					{
-						//copy nameList into temp
+						//copy nameList into temp and delete original and point to temp as new list
 						temp[copy] = nameList[copy];
 						delete[] nameList;
 						nameList = temp;
 					}
 				}
-
-				currentName = new char[strlen(buffer) + 1];
-
-				strcpy(currentName, buffer);
 
 				// placing names into names array.
 				nameList[size] = currentName;

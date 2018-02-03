@@ -2,7 +2,7 @@
 Reverse
 
 
-Class ID: 
+Class ID: Seadra
 
 SRS ID: CST126SRS02
 

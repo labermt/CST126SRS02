@@ -2,13 +2,13 @@
 Reverse
 
 
-Class ID: 
+Class ID: Phantump
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:
 
-Notes:  
+Notes: If a name is greater than the allowed characters, a warning will appear and that line of code will have oddities.
 
 
 ---

@@ -12,70 +12,87 @@
 int main()
 {
 	
-	char ** names = nullptr;
-	names = new char*[100];
-
+	char ** names = nullptr; 
+		names = new char*[1];
 	char ** namesCopy = nullptr;
-	namesCopy = new char*[0];
-
 	char * nameRow = nullptr;
-	
 	char nameInput[257];
-
-	char numNamesString[257];
-
 	int numNames = 0;
-		
-	bool sizeFlag = false;
-	
-	
 
 
-	for (int i = 0;;++i)
+	while (std::cin.good())
 	{
-		if (std::cin.peek() == '\n' || std::cin.eof()) //Exits loop at end of line
-		{ 
-			break; 
-		}  
-		else // Increases number of rows in names array.
+
+		for (int i = 0;;++i)
 		{
-			if (numNames > 0)
-			{
-				delete[] namesCopy;
-				namesCopy = new char*[i];
-				for (int x = 0; x < i; ++x)
+			
+			if (std::cin.peek() == '\n' || std::cin.eof() || std::cin.peek() == ' ') //Exits loop at end of line
+			{ 
+				std::cin.ignore();
+
+				std::cout << std::endl;
+
+				//starts at top of names pointer array and moves backwards, displaying each row.
+				for (int i = numNames - 1; i >= 0; --i)
 				{
-					namesCopy[x] = names[x];
+				std::cout << names[i] << " ";
 				}
 
-				delete[] names;
-				names = new char*[i + 1];
+				std::cout << std::endl;
+				std::cout << std::endl;
 
-				for (int x = 0; x < i; ++x)
+				//Cleans out old array and restarts counters.
+				i = 0;
+				numNames = 0;
+				delete[] names;
+				names = new char*[1];
+
+				break; 
+			}  
+			else // Increases number of rows in names array.
+			{
+				if (numNames > 0)
 				{
+					//Create Scratchpad for names array.
+				  
+					namesCopy = new char*[i + 1];
+
+					//Move names array to scratch pad				
+					for (int x = 0; x < i; ++x)
+					{
+					namesCopy[x] = names[x];
+					}
+
+					//Create new instance of names array, increasing number of rows.
+					delete[] names;
+					names = new char*[i + 1];
+
+					//Moves scratch pad back to names array.
+					for (int x = 0; x < i; ++x)
+					{
 					names[x] = namesCopy[x];
+					}
+					delete[] namesCopy;
 				}
 			}
+
+		
+			std::cin >> std::setw(256) >> nameInput;
+		
+			//Find size of name and creates new row of that size.
+			size_t nameSize = strlen(nameInput) + 1;
+			nameRow = new char[nameSize];
+
+			//Moves name into names pointer array.
+			strcpy(nameRow, nameInput);
+			names[i] = nameRow;
+
+			std::cout << "Processed: " << nameInput << std::endl;  //Remove when finished
+			++numNames;
+		
 		}
 
-		std::cin >> std::setw(256) >> nameInput;
-		
-		
-		size_t nameSize = strlen(nameInput) + 1;
-		nameRow = new char[nameSize];
-		strcpy(nameRow, nameInput);
-		names[i] = nameRow;
-		
-		++numNames;
 	}
-
-	std::cout << std::endl;
-
-	for (int i = numNames - 1; i >= 0; --i)
-	{
-		std::cout << names[i] << " ";
-	}
-
 
 	return 0;
 }

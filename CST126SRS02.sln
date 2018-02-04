@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CST126SRS02", "CST126SRS02\CST126SRS02.vcxproj", "{43944D47-1830-4ED2-A45B-AA1DA8555BBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{52EE080E-0A72-4DF0-87C8-98B2AE967D94}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Debug|x64.ActiveCfg = Debug|x64
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Debug|x64.Build.0 = Debug|x64
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Debug|x86.ActiveCfg = Debug|Win32
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Debug|x86.Build.0 = Debug|Win32
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Release|x64.ActiveCfg = Release|x64
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Release|x64.Build.0 = Release|x64
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Release|x86.ActiveCfg = Release|Win32
+		{43944D47-1830-4ED2-A45B-AA1DA8555BBE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19238A92-27EF-420B-9359-9AD556C1EC52}
+	EndGlobalSection
+EndGlobal

@@ -6,9 +6,13 @@ Class ID: Spearow
 
 SRS ID: CST126SRS02
 
-Unresolved Issues: I don't know if the output in the right format.
+Unresolved Issues: 
 
 Notes:  
+Compiled with Visual Studio 2017 on Windows 8. 
+
+I have to put the code below to use strcpy
+#define _CRT_SECURE_NO_WARNINGS
 
 
 ---

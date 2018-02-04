@@ -8,6 +8,8 @@ SRS ID: CST126SRS02
 
 Unresolved Issues:  Exception thrown at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
 					Unhandled exception at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
+					Has problem transferring characters in char name[] over to first element of char ** names, (cannot find the reason why)
+					Everything else should work fine, just don't understand why an exception is being thrown there..
 
 Notes:  
 

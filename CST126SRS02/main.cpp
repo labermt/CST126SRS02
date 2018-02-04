@@ -16,7 +16,7 @@ const int name_len = 256;
 
 void read(char ** names, char *name);
 void discern(char ** names, char *name, char * temp);
-void populate(char **&names, char *name, int k, int j);
+void populate(char **names, char *name, int k, int j);
 void output(char ** names, int k);
 void purge(char ** names, int k);
 bool another();
@@ -103,7 +103,7 @@ void discern(char ** names, char *name, char * temp)
 	}
 }
 //fill array with names
-void populate(char **&names, char * name, int k, int j)
+void populate(char **names, char * name, int k, int j)
 {
 	for (int i = 0; i < j + 1; i++)
 	{
@@ -181,10 +181,10 @@ bool another()
 
 //check for char or continuous chars, in the line of text. Also check for '\0' escape operator. 
 
-//If escape operator is found, jump to line 28.
+//If escape operator is found, short circuit.
 
 //If found insert chars into a char array (name), check for end (white space separator) up until 256 character cap is reached.
 
-//If end is found, insert name into a array of names. Check for chars again, looping line 20-26 until no names are left.
+//If end is found, insert name into a array of names. Check for chars again, looping steps until '\0' is found.
 
 //Output the initial inputs in reverse to the console (cout).

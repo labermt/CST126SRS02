@@ -1,15 +1,22 @@
 # CST126SRS02
 Reverse
+open file using relative path and go back to relative path
 
 
-Class ID: 
+Class ID: Tangela	
 
 SRS ID: CST126SRS02
 
 Unresolved Issues:  
+	1. If there is whitespace after the last word then the reversed line
+	   will begin with whitespace.
+	2. 
 
 Notes:  
-
+	1. Compiled with Visual Studio 2017 on Windows 10
+	2. Reads in from "myfile.txt"
+	3. Got help for reverse and reverse_words functions from 
+	   https://www.geeksforgeeks.org/reverse-words-in-a-given-string/
 
 ---
 

@@ -61,7 +61,7 @@ void discern(char ** names, char *name, char * temp)
 {
 	if (temp != nullptr)
 	{
-		int i = 0, k = 1;
+		int i = 0, k = 0;
 		char ch = '0';
 
 		while (ch != '\0') //checks for \0 (end of string) if found escapes loop

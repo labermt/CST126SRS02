@@ -2,11 +2,11 @@
 Reverse
 
 
-Class ID: 
+Class ID: JigglyPuff (J.Puff)
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:  White space characters are not dealt with. 
 
 Notes:  
 

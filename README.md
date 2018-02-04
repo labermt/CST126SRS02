@@ -15,6 +15,7 @@ Notes:
 - check for nullptr presence in test cases. if present, short circuit
 - output the input in reverse line by line
 - vector and Linked List are forbidden
+- Ctrl+Z can be used to simulate a escape from the program
 
 ---
 

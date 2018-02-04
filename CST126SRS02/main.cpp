@@ -1,7 +1,7 @@
 /***********************************************************
 * Class ID:			Mespirit
 * Date Created:		1/25/18
-* Updated:			1/31/18
+* Updated:			2/3/18
 * Assignment:		CST126SRS02
 * Filename:			main.cpp
 ***********************************************************/
@@ -14,9 +14,9 @@
 
 const int name_len = 256;
 
-void read(char ** names, char name[]);
-void discern(char ** names, char name[], char * temp);
-void populate(char ** names, char name[], int k, int j);
+void read(char ** names, char *name);
+void discern(char ** names, char *name, char * temp);
+void populate(char **&names, char *name, int k, int j);
 void output(char ** names, int k);
 void purge(char ** names, int k);
 bool another();
@@ -37,10 +37,12 @@ int main()
 	return 0;
 }
 //pulls in line of text from user
-void read(char ** names, char name[]) 
+void read(char ** names, char *name) 
 {
 	std::string text_line;
 	std::size_t string_len = 0;
+
+	std::cout << "Enter line of names: ";
 
 	std::getline(std::cin, text_line);
 
@@ -55,11 +57,11 @@ void read(char ** names, char name[])
 	delete[] temp;
 }
 //finds beginning and end of each name in line
-void discern(char ** names, char name[], char * temp)
+void discern(char ** names, char *name, char * temp)
 {
 	if (temp != nullptr)
 	{
-		int i = 0, k = 0;
+		int i = 0, k = 1;
 		char ch = '0';
 
 		while (ch != '\0') //checks for \0 (end of string) if found escapes loop
@@ -92,14 +94,19 @@ void discern(char ** names, char name[], char * temp)
 	}
 	else
 	{
-		std::cerr << "\nNames are nullptr\n";
+		std::cerr << "\nLine is nullptr\n";
 	}
 }
 //fill array with names
-void populate(char ** names, char name[], int k, int j)
+void populate(char **&names, char * name, int k, int j)
 {
-	for(int i = 0; i < j; i++)
-		names[k][i] = name[j];
+
+	for (int i = 0; i < j + 1; i++)
+	{
+		for (int l = 0; l < j + 1; l++)
+			names[k][i] = name[l];
+	}
+
 }
 //outputs names in reverse of input
 void output(char ** names, int k)
@@ -161,6 +168,8 @@ bool another()
 			std::cerr << "\nInvalid Input. Enter Another Line of Names? (y/n): ";
 		}
 	} while (eq == false);
+
+	std::cout << std::endl;
 
 	return reprompt;
 }

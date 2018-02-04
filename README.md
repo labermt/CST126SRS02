@@ -6,7 +6,8 @@ Class ID: Mespirit
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  None.
+Unresolved Issues:  Exception thrown at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
+					Unhandled exception at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
 
 Notes:  
 

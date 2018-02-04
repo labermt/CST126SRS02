@@ -30,6 +30,9 @@ int main()
 	do
 	{ 
 		read(names, name);
+
+		reprompt = another();
+
 	} while (reprompt == true);
 
 	system("pause");
@@ -91,6 +94,8 @@ void discern(char ** names, char *name, char * temp)
 		}
 
 		output(names, k);
+
+		purge(names, k);
 	}
 	else
 	{
@@ -100,13 +105,11 @@ void discern(char ** names, char *name, char * temp)
 //fill array with names
 void populate(char **&names, char * name, int k, int j)
 {
-
 	for (int i = 0; i < j + 1; i++)
 	{
 		for (int l = 0; l < j + 1; l++)
 			names[k][i] = name[l];
 	}
-
 }
 //outputs names in reverse of input
 void output(char ** names, int k)

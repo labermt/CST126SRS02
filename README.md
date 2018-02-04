@@ -6,9 +6,9 @@ Class ID: Meowth
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:  Fails almost immedately with sets of two or less words. on longer sets works for last two words before failing. Does't really work well at all
 
-Notes:  
+Notes:  I don't believe I used ragged arrays for my program. When I realized this mistake I made a short attempt to use them only to quickly abandon it to go back to something I felt closer to succeding with.
 
 
 ---

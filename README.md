@@ -2,13 +2,14 @@
 Reverse
 
 
-Class ID: 
+Class ID: Shelmet
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues: When a name longer than 256 characters is the last name in the console, the user must
+hit enter twice in order to see results.
 
-Notes:  
+Notes: Checked for memory leaks :)
 
 
 ---

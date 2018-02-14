@@ -6,7 +6,7 @@ Class ID: Spheal
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues: I have one warning about converting a size_t to an int (line 59) 
 
 Notes:  
 

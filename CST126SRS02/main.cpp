@@ -81,7 +81,7 @@ int main()
 				}
 
 				// **** More than 1 name on line. Before last name on line ****
-				const int lengthOfNewName = strlen(buffer);
+				const size_t lengthOfNewName = strlen(buffer);
 
 				if (firstNameOnLine)
 				{
@@ -124,4 +124,5 @@ int main()
 			}
 		}
 	}
+	return 0;
 }

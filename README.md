@@ -1,39 +1,35 @@
 # CST126SRS02
 Reverse
 
-
-Class ID: 
+Class ID: Magcargo
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:
 
-Notes:  
+Notes: Compiled with Microsoft Visual Studio Enterprise 2017 Version 15.3.3 on Windows 10
 
+Purpose: To take cString from console, add each part to a ragged array, then output it in reverse order.
 
----
-
-Purpose:  
-
-Learn to use heap memory and properly clean up your data without leaks or corruption.  
+Learn to use heap memory and properly clean up your data without leaks or corruption.
 Redirect cin and cout to file i/o.
 
-Instructions:  
+Instructions:
+
+Read text from std::cin into a ragged cstring array until the end of line is reached.
 
 Read text from std::cin into a ragged cstring array until the end of line is reached.  
 
-Each element of the ragged array must be allocated on the heap.  
+Each line can have zero, one, or multiple names.
 
-Each line can have zero, one, or multiple names.  
+For example:
 
-For example:  
+Doublade Drilbur Hippopotas Inkay Jigglypuff lllumise Magcargo Mespirit
+Mudkip Ninetales
 
-Doublade Drilbur Hippopotas Inkay Jigglypuff lllumise Magcargo Mespirit  
-Mudkip Ninetales  
-  
-Persian Phantump Seadra  
-Shelmet  
-Sliggoo Solrock Spearow Spheal Staryu Tangela Tentacool  
+Persian Phantump Seadra
+Shelmet
+Sliggoo Solrock Spearow Spheal Staryu Tangela Tentacool
 
 Process the data stored in the ragged array to std:cout in reverse order.
 
@@ -48,7 +44,7 @@ The processing is done on a line by line basis. Each line input is echoed back i
 
 A name can be a maximum of 256 characters.  
 
-There is no limit on the number of lines or the number of names per line.  
+TIPS:
 
 Be certain to properly clean up any allocated memory. Leaks and memory corruption will be graded harshly.  
 

@@ -2,14 +2,23 @@
 Reverse
 
 
-Class ID: 
+Class ID: Mespirit
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues:  Exception thrown at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
+					Unhandled exception at 0x00007FF7FE928E0C in CST126SRS02.exe: 0xC0000005: Access violation reading location 0x0000000000000008.
+					Has problem transferring characters in char name[] over to first element of char ** names, (cannot find the reason why)
+					Everything else should work fine, just don't understand why an exception is being thrown there..
 
 Notes:  
 
+- char name [257];
+- std::cin << setw(256) << name;
+- check for nullptr presence in test cases. if present, short circuit
+- output the input in reverse line by line
+- vector and Linked List are forbidden
+- Ctrl+Z can be used to simulate a escape from the program
 
 ---
 

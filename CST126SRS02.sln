@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reverse", "Reverse\Reverse.vcxproj", "{B9029224-9A3B-4F28-9619-07D8810EB7EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E996E11A-F068-4311-B493-EE757D6BB8DB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Debug|x64.ActiveCfg = Debug|x64
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Debug|x64.Build.0 = Debug|x64
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Debug|x86.ActiveCfg = Debug|Win32
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Debug|x86.Build.0 = Debug|Win32
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Release|x64.ActiveCfg = Release|x64
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Release|x64.Build.0 = Release|x64
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Release|x86.ActiveCfg = Release|Win32
+		{B9029224-9A3B-4F28-9619-07D8810EB7EA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BF7F696-0F4E-4D6E-BACF-DD95E3402C30}
+	EndGlobalSection
+EndGlobal

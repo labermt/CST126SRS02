@@ -2,13 +2,13 @@
 Reverse
 
 
-Class ID: 
+Class ID: Staryu
 
 SRS ID: CST126SRS02
 
 Unresolved Issues:  
 
-Notes:  
+Notes:  I received help from Mitch Besser and worked with  classmates.
 
 
 ---

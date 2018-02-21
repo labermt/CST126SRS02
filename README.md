@@ -2,13 +2,13 @@
 Reverse
 
 
-Class ID: 
+Class ID: Inkay
 
 SRS ID: CST126SRS02
 
-Unresolved Issues:  
+Unresolved Issues: Does not print out names.
 
-Notes:  
+Notes: Could not figure out how to use peek or any other way to accomplish the task.
 
 
 ---

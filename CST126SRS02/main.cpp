@@ -5,12 +5,19 @@
 * Assignment:		CST126SRS02
 * Filename:			main.cpp
 ***********************************************************/
+
+#include <cctype>
+#include <cstring> // string.h is for 'C' programs. C++ provided headers have no extension. 
+#include <string>
 #include <iostream>
 #include <iomanip>
-#include <cstring>
-#include <string>
-#include <cctype>
-#include <string.h>
+
+#ifdef _DEBUG
+#define _CRTDBG_MAP_ALLOC  
+#include <stdlib.h>  
+#include <crtdbg.h> 
+#endif _DEBUG
+
 
 const int name_len = 256;
 
@@ -23,7 +30,7 @@ bool another();
 
 int main()
 {
-	char ** names = 0;
+	char ** names = new char*[10];
 	char name[name_len];
 	bool reprompt = true;
 
@@ -33,9 +40,9 @@ int main()
 
 		reprompt = another();
 
-	} while (reprompt == true);
+	} while (reprompt); // Testing a bool for == true can be simply the bool. 
 
-	system("pause");
+	// system("pause"); // No prompts allowed. See class policy. 
 
 	return 0;
 }
@@ -51,7 +58,7 @@ void read(char ** names, char *name)
 
 	string_len = text_line.length();
 
-	auto temp = new char [string_len + 1];
+	const auto temp = new char [string_len + 1];
 
 	strcpy_s(temp, string_len+1, text_line.c_str());
 
@@ -108,7 +115,9 @@ void populate(char **names, char * name, int k, int j)
 	for (int i = 0; i < j + 1; i++)
 	{
 		for (int l = 0; l < j + 1; l++)
-			names[k][i] = name[l];
+		{
+			names[k][i] = name[l]; // names is a pointer to an array of char*, NOT a 2D array. 
+		}
 	}
 }
 //outputs names in reverse of input
@@ -123,33 +132,34 @@ void output(char ** names, int k)
 void purge(char ** names, int k)
 {
 	for (int i = 0; i < k; ++i)
+	{
 		delete[]  names[i];
+	}
 	delete []names;
 }
 //another line of names?
 bool another()
 {
 	char answ[3];
-	const char * yes = "yes";
-	const char * no = "no";
-	const char * char_no = "n";
-	const char * char_yes = "y";
+	static const auto yes = "yes";
+	static const auto no = "no";
+	static const auto char_no = "n";
+	static const auto char_yes = "y";
 
 	bool eq;
-	bool reprompt;
+	bool reprompt; // RANDOM results. Not all paths initialize. Consider while loops please!
 
 	std::cout << "Enter Another Line of Names? (y/n): ";
 
 	do
 	{
-		char c;
 		int i = 0;
 
 		std::cin >> answ;
 
 		while (answ[i])
 		{
-			c = answ[i];
+			char c = answ[i];
 			c = tolower(c);
 			answ[i] = c;
 			i++;
@@ -170,7 +180,7 @@ bool another()
 			eq = false;
 			std::cerr << "\nInvalid Input. Enter Another Line of Names? (y/n): ";
 		}
-	} while (eq == false);
+	} while (!eq);
 
 	std::cout << std::endl;
 

@@ -1,4 +1,4 @@
-// CST126SRS02.cpp : Defines the entry point for the console application.
+// main.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -18,11 +18,9 @@ int main()
 	*/
 	char* placer{};
 	char* walker{};
-	char* nameList;
-	nameList = new char[240];
+	char* nameList = new char[240];
 	char* spacer = nameList;
-	char* reverseList;
-	reverseList = new char[240];
+	char* reverseList = new char[240];
 
 	std::cin.get(nameList, 240);
 
@@ -53,7 +51,7 @@ int main()
 		*placer = ' ';
 		placer++;
 
-		while(walker != '\0') {
+		while(walker != '\0') { // walker is a char*, '\0' is a char. 
 			*placer = *walker;
 			placer++;
 			walker++;

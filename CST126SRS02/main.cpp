@@ -1,10 +1,10 @@
-// CST126SRS02.cpp : Defines the entry point for the console application.
+// main.cpp : Defines the entry point for the console application.
 // Alexander Burbank
 // Spheal
 
 #include "stdafx.h"
 #include <iostream>
-#include <string>
+//#include <string>
 
 using std::cin;
 using std::cout;
@@ -14,7 +14,6 @@ int main()
 {
 	char buffer[257];
 	char** nameCollection = nullptr;
-	char** tempCollection = nullptr;
 
 	size_t nameCounter = 0;
 
@@ -56,7 +55,7 @@ int main()
 					cout << buffer;
 
 					// Print other names
-					for (int i = nameCounter - 1; i >= 0; i--)
+					for (auto i = nameCounter; i-- > 0;)
 					{
 						cout << " " << *(nameCollection + i);
 
@@ -89,7 +88,7 @@ int main()
 					nameCollection = new char*[1];
 
 					nameCollection[0] = new char[lengthOfNewName + 1];
-					for (int i = 0; i < lengthOfNewName; i++)
+					for (size_t i = 0; i < lengthOfNewName; i++)
 					{
 						*(nameCollection[0] + i) = buffer[i];
 					}
@@ -100,17 +99,17 @@ int main()
 				else
 				{
 					// Extend name collection
-					tempCollection = new char*[nameCounter + 1];
+					char** tempCollection = new char*[nameCounter + 1];
 
 					for (size_t i = 0; i < nameCounter; ++i)
 					{
 						tempCollection[i] = nameCollection[i];
 					}
 
-					// creating new temparary array
+					// creating new temporary array
 					tempCollection[nameCounter] = new char[lengthOfNewName + 1];
 
-					for (int i = 0; i < lengthOfNewName; i++)
+					for (size_t i = 0; i < lengthOfNewName; i++)
 					{
 						*(tempCollection[nameCounter] + i) = buffer[i];
 					}
@@ -124,5 +123,6 @@ int main()
 			}
 		}
 	}
+
 	return 0;
 }

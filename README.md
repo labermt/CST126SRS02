@@ -47,7 +47,7 @@ Sliggoo Solrock Spearow Spheal Staryu Tangela Tentacool
 Process the data stored in the ragged array to std:cout in reverse order.
 
 Mespirit Magcargo lllumise Jigglypuff Inkay Hippopotas Drilbur Doublade  
-Mudkip Ninetales  
+Ninetales Mudkip  
   
 Seadra Phantump Persian  
 Shelmet  
